@@ -109,7 +109,7 @@ var createScene = function () {
         vec3 specular = ks * specularFactor;
         float distanceToLight = sqrt(distanceSquared);
 
-        float attenuation = 1.0 / (1.0 + 0.01 * sqrt(distanceSquared));
+        float attenuation = 1.0 / (1.0 + 0.01 * distanceSquared);
 
         return lColor * (diffuse + specular) * attenuation;
         
